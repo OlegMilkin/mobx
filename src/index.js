@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import DevTools from 'mobx-react-devtools';
 import { observable, computed } from 'mobx';
 import { observer } from 'mobx-react';
+import Test from './Test';
 
 const nickName = new class UserNickName {
   @observable firstName = 'Yauhen';
@@ -37,6 +38,7 @@ nickName.decrement = function() {
         <h1>{this.props.store.age}</h1>
         <button onClick={this.handleDecrement}>-1</button>
         <button onClick={this.handleIncrement}>+1</button>
+        <Test/>
       </div>
     );
   }
